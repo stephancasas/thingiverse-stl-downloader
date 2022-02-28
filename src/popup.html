@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  </head>
+  <body>
+    <div
+      id="ext--manifest"
+      class="w-96 flex flex-col text-xs overflow-y-scroll divide-y text-gray-700"
+      style="max-height: 400px"
+    >
+      <!-- record template -->
+      <div class="ext--record hidden flex items-center pl-2 py-1">
+        <span class="flex-grow truncate font-semibold w-0"></span>
+        <button class="flex items-center rounded-full w-8 h-8 bg-blue-500 text-white hover:bg-blue-400 my-0 mx-2">
+          <i class="mx-auto fas fa-download"></i>
+        </button>
+      </div>
+
+      <!-- vacancy banner  -->
+      <div id="ext--vacancy" class="hidden flex-grow flex items-center h-40 font-semibold text-sm text-gray-400">
+        <div class="mx-auto">No files found.</div>
+      </div>
+    </div>
+
+    <!-- campaign banner -->
+    <div id="ext--campaign" class="flex items-center text-xs text-gray-600 border-t">
+      <button class="flex items-center border-r text-gray-300 m-0 p-0 w-6 h-6 hover:bg-gray-100 hover:text-red-300">
+        <i class="mx-auto fas fa-times-circle"></i>
+      </button>
+      <div class="flex-grow flex flex-col">
+        <div class="mx-auto flex items-center">
+          <span>
+            Is this useful? Consider
+            <a class="text-blue-400 cursor-pointer"">
+              buying me a coffee
+            </a>
+            if you think so.
+          </span>
+          <span class="pl-1 text-sm">&#128578;</span>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

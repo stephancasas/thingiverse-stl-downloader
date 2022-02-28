@@ -1,0 +1,16 @@
+{
+    "name": "thingiverse-stl-downloader",
+    "version": "1.0.0",
+    "scripts": {
+        "copy": "node scripts/copy.js",
+        "build:css": "tailwindcss -i src/style.css -o build/style.css --minify",
+        "bundle": "node scripts/bundle.js",
+        "build": "npm run copy && npm run build:css && npm run bundle"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.0.23"
+    }
+}
