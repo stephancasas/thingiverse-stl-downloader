@@ -1,6 +1,8 @@
-chrome.runtime.sendMessage({
-  iconContext: {
-    onSite: window.location.href.toLowerCase().includes('thingiverse'),
-    darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches,
-  },
-});
+// Injected into Thingiverse and forwards a message when loading/unloading.
+window.onload = () => {
+  chrome.runtime.sendMessage({onSite: true});
+}
+
+window.onbeforeunload = () => {
+  chrome.runtime.sendMessage({onSite: false});
+}
